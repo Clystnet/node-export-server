@@ -41,24 +41,26 @@ First, make sure you have node.js installed. Go to [nodejs.org](https://nodejs.o
 
 After node.js is installed, install the export server by opening a terminal and typing:
 
-    npm install highcharts-export-server -g
-
-OR:
-
-    git clone https://github.com/highcharts/node-export-server
+    git clone https://github.com/Clystnet/node-export-server.git
     npm install
     npm link
+    
+Now you need to install PM2 which will manage the phantomJS sessions and keep them running even if the server restarts
 
-
-Note: depending on how you installed Node, you may have to create a symlink from `nodejs` to `node`. Example on Linux:
-
-```
-ln -s `which nodejs` /usr/bin/node
-```
+    npm install pm2@latest -g
 
 ## Running
 
-    highcharts-export-server <arguments>
+    npm run start
+    npm run save
+    
+## Listing current instances
+
+    npm run list
+    
+## Stopping
+    
+    npm run stop
 
 ## Command Line Arguments
 

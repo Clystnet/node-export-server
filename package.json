@@ -10,7 +10,13 @@
     "highcharts-export-server": "./bin/cli.js"
   },
   "scripts": {
-    "install": "node ./build.js"
+    "install": "node ./build.js",
+    "start": "pm2 start ./bin/cli.js --name='highchart-server' -- --enableServer 1 --rateLimit 10 --skipKey kgnNubjMegAFt9BfB82pq --skipToken Qsf2aVeP22cFWj2tu3pC7V",
+    "save": "pm2 save",
+    "stop": "pm2 stop all",
+    "list": "pm2 list",
+    "link": "pm2 link 69ws99fimv7h7np r67z7frac2nego5",
+    "startup": "pm2 startup"
   },
   "main": "lib/index.js",
   "license": "MIT",
