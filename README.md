@@ -1,3 +1,12 @@
+To run it on Plesk do the following
+
+ln -s /opt/plesk/node/9/bin/node /usr/bin/node - this redirects to the correct node version
+
+/opt/plesk/node/9/bin/highcharts-export-server --enableServer 1 --rateLimit 10 --skipKey kgnNubjMegAFt9BfB82pq --skipToken Qsf2aVeP22cFWj2tu3pC7V - this runs the server in a terminal
+
+you can then user supervisor to run the process in the background!
+
+
 # Highcharts Node.js Export Server
 
 Convert Highcharts.JS charts to static image files.
